@@ -1,0 +1,32 @@
+body {
+    font-family: fantasy, sans-serif;
+}
+#topbar {
+    font-size: xx-large;
+    background-color: gold;
+    border: thick goldenrod solid;
+}
+.grid-container {
+    background-color: mediumblue;
+    margin: 50px;
+    display: grid;
+    gap: 10px;
+    border: thick mediumblue solid;
+    grid-template-columns: repeat(7, 100px);
+    grid-template-rows: repeat(6, 100px);
+    width: fit-content;
+    float: left;
+}
+.grid-item {
+    background-color: lightblue;
+    text-align: center;
+    color: lightblue;
+    border-radius: 75%;
+    align-content: center;
+}
+#turns {
+    vertical-align: center;
+    float: left;
+    margin: 5px;
+    font-size: 100px;
+}
