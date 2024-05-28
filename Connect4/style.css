@@ -1,6 +1,7 @@
 body {
     font-family: fantasy, sans-serif;
     background-color: lightblue;
+    margin-top: 50px;
 }
 .grid-container {
     background-color: mediumblue;
