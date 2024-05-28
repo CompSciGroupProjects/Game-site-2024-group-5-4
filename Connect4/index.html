@@ -9,7 +9,21 @@
     <script src = script.js></script>
 </head>
 <body>
-<div id = "topbar">Connect 4</div>
+<nav class = "navbar navbar-expand-sm bg-warning fixed-top">
+    <div class = "container-fluid shadow p-1 mb-1 bg-dark">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul id = "navID" class = "navbar-nav">
+                <li class = "nav-item border-2"><a class = "nav-link" href = "../"><h4>Home</h4></a></li>
+                <li class = "nav-item border-2"><a class = "nav-link" href = "."><h4>Connect 4</h4></a></li>
+                <li class = "nav-item border-2"><a class = "nav-link" href = "../RockPaperScissors"><h4>Rock Paper Scissors</h4></a></li>
+                <li class = "nav-item border-2"><a class = "nav-link" href = "../TicTacToe"><h4>Tic Tac Toe</h4></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <div class = "grid-container container-fluid">
     <div id = "row0col0" class = "grid-item" onpointerover = "hoverCol(0)" onclick = "clicked(0,0)"> </div>
     <div id = "row0col1" class = "grid-item" onpointerover = "hoverCol(1)" onclick = "clicked(0,1)"> </div>
