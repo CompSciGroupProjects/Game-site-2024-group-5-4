@@ -1,9 +1,5 @@
-function home()
-{
-    window.location.href = "../";
-}
-
 let player = "X";
+
 function box1()
 {
 

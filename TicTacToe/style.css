@@ -4,16 +4,19 @@
     height: 250px;
 }
 
-#body {
+#body
+{
+    padding-top: 100px;
     background-color: lightblue;
     text-align: center;
     color: black;
     font-family: fantasy, sans-serif;
-    border-radius: 75%;
-    align-content: center;
-    vertical-align: center;
-    float: left;
-    margin: 5px;
-    font-size: 50px;
-    padding: 65px;
+}
+
+.highlight
+{
+    text-align: left;
+    font-family: fantasy, sans-serif;
+    font-size: 100px;
+    background-color: #FCEEA7;
 }
