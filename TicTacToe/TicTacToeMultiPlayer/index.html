@@ -27,42 +27,22 @@
     </div>
 </nav>
 
-<div class="container-fluid text-center justify-content-center row mt-5">
-    <div class= "row justify-content-center row">
-        <div class= "justify-content-center row">
-            <div class = "row justify-content-center row">
-                <button type="button" class = "btn col btn-outline-danger" onclick = "home()">Home</button>
-            </div>
-
-        </div>
-    </div>
+<div id = "highlight">
+Multi-Player
 </div>
-
-<h1 class = "text-center text-dark mt-5 mb-5">Multi-Player</h1>
-<h2 id = "player" class = "text-center text-dark mt-5 mb-5" onclick = "box()"> A </h2>
-<div class="container-fluid text-center justify-content-center row mt-5">
-    <div class= "row justify-content-center row">
-        <div class= "justify-content-center row">
-            <div class = "row justify-content-center row">
-                <button id = "box1" type="button" class = "btn col btn-outline-danger border-start-0 border-top-0 text-dark" onclick = "box1()">1</button>
-                <button id = "box2" type="button" class = "btn col btn-outline-danger border-top-0 text-dark" onclick = "box2()">2</button>
-                <button id = "box3" type="button" class = "btn col btn-outline-danger border-top-0 border-end-0 text-dark" onclick = "box3()">3</button>
-            </div>
-
-            <div class = "row justify-content-center">
-                <button id = "box4" type="button" class = "btn col btn-outline-danger border-start-0 text-dark" onclick = "box4()">4</button>
-                <button id = "box5" type="button" class = "btn col btn-outline-danger text-dark" onclick = "box5()">5</button>
-                <button id = "box6" type="button" class = "btn col btn-outline-danger border-end-0 text-dark" onclick = "box6()">6</button>
-            </div>
-
-            <div class = "row justify-content-center">
-                <button id = "box7" type="button" class = "btn col btn-outline-danger border-start-0 border-bottom-0 text-dark" onclick = "box7()">7</button>
-                <button id = "box8" type="button" class = "btn col btn-outline-danger border-bottom-0 text-dark" onclick = "box8()">8</button>
-                <button id = "box9" type="button" class = "btn col btn-outline-danger border-end-0 border-bottom-0 text-dark" onclick = "box9()">9</button>
-            </div>
-        </div>
-    </div>
+<div id="status">Player X's turn</div>
+<div id="board">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
 </div>
+<button id="resetButton">Reset</button>
 
 </body>
 </html>
