@@ -12,7 +12,7 @@
     background-color: lightblue;
     text-align: center;
     color: black;
-    padding-top: 25%;
+    padding-top: 5px;
     font-family: fantasy, sans-serif;
 }
 
@@ -20,5 +20,41 @@
 {
     font-family: fantasy, sans-serif;
     font-size: 100px;
+    color: black;
+    border: thick black solid;
+    padding: 10px;
+    background-color: white;
+}
+
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin-bottom: 20px;
+    background-color: darkblue;
+    padding: 5px;
+}
+.cell {
+    width: 100px;
+    height: 100px;
     background-color: #FCEEA7;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+.cell.disabled {
+    pointer-events: none;
+}
+#status {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+#resetButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
 }
