@@ -8,4 +8,8 @@ body {
 }
 .gameButton {
     background-color: #fceea7;
+    font-size: 50px;
+    text-align: center;
+    width: fit-content;
+    padding: 50px;
 }
