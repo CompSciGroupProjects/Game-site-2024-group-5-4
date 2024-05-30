@@ -10,7 +10,7 @@ body {
     font-size: 50px;
     padding: 65px;
 }
-#title {
+.title{
     font-size: 100px;
     background-color: #fceea7;
 }
