@@ -1,7 +1,7 @@
 body {
     font-family: fantasy, sans-serif;
     background-color: lightblue;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .grid-container {
     background-color: mediumblue;
@@ -26,4 +26,8 @@ body {
     float: left;
     margin: 5px;
     font-size: 50px;
+}
+#title {
+    font-size: 100px;
+    background-color: #fceea7;
 }
