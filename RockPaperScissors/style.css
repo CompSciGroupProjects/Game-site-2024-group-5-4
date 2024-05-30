@@ -9,8 +9,10 @@ body {
     margin: 5px;
     font-size: 50px;
     padding: 65px;
+    padding-top: 100px;
 }
-#title {
+.title{
     font-size: 100px;
     background-color: #fceea7;
+    font-family: fantasy, sans-serif;
 }
