@@ -15,17 +15,26 @@ body {
     border: thin black solid;
 }
 .gameCard {
-    width: fit-content;
+    width: 100%;
     display: inline-flex;
     padding: 50px;
     text-align: center;
 }
-.gameCard img {
-
+.gameIcon img {
+    height: 100px;
+    width: 200px;
+}
+.gameIcon {
+    background-color: white;
+    border: thick black solid;
+    align-content: center;
+    vertical-align: center;
+    padding: 10px;
 }
 .gameDesc {
     border: thick black solid;
     background-color: white;
     padding: 10px;
     margin-left: 40px;
+    float: right;
 }
