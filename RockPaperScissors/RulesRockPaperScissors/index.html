@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>Rock Paper Scissors Rules</title>
 </head>
 <body>
-<p> Play against a computer and win a game of Rock Paper Scissors. Paper beats rock, Rock beats scissors and Scissors beats paper.</p>
-../
+<nav class = "navbar navbar-expand-sm bg-warning fixed-top">
+    <div class = "container-fluid shadow p-1 mb-1 bg-dark">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul id = "navID" class = "navbar-nav">
+                <li class = "nav-item border-2"><a class = "nav-link" href = "../"><h4>Home</h4></a></li>
+                <li class = "nav-item border-2"><a class = "nav-link" href = "../Connect4"><h4>Connect 4</h4></a></li>
+                <li class = "nav-item border-2"><a class = "nav-link" href = "../RockPaperScissors"><h4>Rock Paper Scissors</h4></a></li>
+                <li class = "nav-item border-2"><a class = "nav-link" href = "."><h4>Tic Tac Toe</h4></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="col-md-4">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title align-content-center justify-content-center align-items-center justify-content-lg-center">Rock Paper Scissors Rules</h5>
+            <img class = "card-img-top align-content-center" src="../../Images/RPSscreenshot.png">
+            <p class="card-text">Play against a computer and win a game of Rock Paper Scissors. Paper beats rock, Rock beats scissors and Scissors beats paper.</p>
+            <a href="../" class="btn btn-primary">Play Now</a>
+        </div>
+    </div>
+</div>
 </body>
 </html>
