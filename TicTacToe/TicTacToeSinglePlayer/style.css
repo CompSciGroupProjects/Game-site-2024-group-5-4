@@ -44,3 +44,11 @@
     font-size: 80px;
     padding: 10px;
 }
+
+.highlight
+{
+    text-align: left;
+    font-family: fantasy, sans-serif;
+    font-size: 100px;
+    background-color: #FCEEA7;
+}
