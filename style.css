@@ -12,7 +12,20 @@ body {
     text-align: center;
     padding: 50px;
     cursor: pointer;
+    border: thin black solid;
 }
 .gameCard {
     width: fit-content;
+    display: inline-flex;
+    padding: 50px;
+    text-align: center;
+}
+.gameCard img {
+
+}
+.gameDesc {
+    border: thick black solid;
+    background-color: white;
+    padding: 10px;
+    margin-left: 40px;
 }
