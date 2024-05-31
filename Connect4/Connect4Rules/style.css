@@ -8,3 +8,6 @@ body {
     width: 500px;
     align-content: center;
 }
+.card-img-top {
+    background-color: lightblue;
+}
