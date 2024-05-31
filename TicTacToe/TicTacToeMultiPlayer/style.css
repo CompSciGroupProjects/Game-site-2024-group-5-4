@@ -1,60 +1,80 @@
-.btn
-{
-    width: 100%;
-    height: 250px;
-}
 #body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100vh;
+    margin: 0;
     background-color: lightblue;
     text-align: center;
     color: black;
-    padding-top: 5px;
     font-family: fantasy, sans-serif;
 }
-
-#highlight
-{
-    font-family: fantasy, sans-serif;
-    font-size: 100px;
-    color: black;
-    border: thick black solid;
-    padding: 10px;
-    background-color: white;
+h1 {
+    margin-bottom: 20px;
 }
-
-
-#board {
+.board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    grid-gap: 5px;
-    margin-bottom: 20px;
-    background-color: darkblue;
-    padding: 5px;
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
 }
 .cell {
     width: 100px;
     height: 100px;
-    background-color: #FCEEA7;
-    border: 1px solid black;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 2em;
+    background-color: #FCEEA7;
+    justify-content: center;
+    border: 1px solid #000;
+    font-size: 24px;
     cursor: pointer;
 }
-.cell.disabled {
-    pointer-events: none;
+.cell.x {
+    color: black;
 }
-#status {
-    margin-bottom: 20px;
-    font-size: 1.5em;
+.cell.o {
+    color: black;
 }
-#resetButton {
+.reset-btn {
+    margin-top: 20px;
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 16px;
     cursor: pointer;
+}
+.winner {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    display: none;
+}
+.turn-text {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.option-buttons {
+    margin-top: 20px;
+}
+.option-buttons button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn
+{
+    width: 100%;
+    height: 150px;
+}
+
+#body
+{
+    background-color: lightblue;
+}
+
+#button
+{
+    font-size: 80px;
+    padding: 10px;
 }

@@ -1,210 +1,107 @@
-let player = "X";
-
-function box1()
+function home()
 {
-
-    if(player === "X")
-    {
-        document.getElementById("box1").innerText = "X";
-    }
-    else
-    {
-        document.getElementById("box1").innerText = "O";
-    }
-
-    if(player === "X")
-    {
-        document.getElementById("player").innerText = "Player O's just placed";
-    }
-    else
-    {
-        document.getElementById("player").innerText = "Player X's just placed";
-    }
-
-    if (player === "X") {
-        player = "O";
-    } else {
-        player = "X";
-    }
+    window.location.href = "../";
 }
 
-function box2()
-{
+document.addEventListener('DOMContentLoaded', () => {
+    const board = document.getElementById('board');
+    const cells = document.querySelectorAll('.cell');
+    const statusDisplay = document.getElementById('status');
+    const resetButton = document.getElementById('resetButton');
+    let currentPlayer = 'X';
+    let gameActive = true;
+    const player = 'X';
+    const computer = 'O';
+    const winConditions = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
 
-    if(player === "X")
-    {
-        document.getElementById("box2").innerText = "X";
-    }
-    else
-    {
-        document.getElementById("box2").innerText = "O";
-    }
+    function handleCellClick(e) {
+        const cell = e.target;
+        const index = cell.getAttribute('data-index');
 
-    if(player === "X")
-    {
-        document.getElementById("player").innerText = "Player O's just placed";
-    }
-    else
-    {
-        document.getElementById("player").innerText = "Player X's just placed";
-    }
+        if (cell.textContent !== '' || !gameActive) return;
 
-    if (player === "X") {
-        player = "O";
-    } else {
-        player = "X";
-    }
-}
+        cell.textContent = currentPlayer;
+        cell.classList.add('disabled');
 
-function box3()
-{
+        if (checkWin(currentPlayer)) {
+            statusDisplay.textContent = `${currentPlayer} wins!`;
+            gameActive = false;
+            return;
+        }
 
-    if (player === "X") {
-        document.getElementById("box3").innerText = "X";
-    } else {
-        document.getElementById("box3").innerText = "O";
-    }
+        if (isBoardFull()) {
+            statusDisplay.textContent = 'Draw!';
+            gameActive = false;
+            return;
+        }
 
-    if (player === "X") {
-        document.getElementById("player").innerText = "Player O's just placed";
-    } else {
-        document.getElementById("player").innerText = "Player X's just placed";
-    }
+        currentPlayer = currentPlayer === player ? computer : player;
+        statusDisplay.textContent = `Player ${currentPlayer}'s turn`;
 
-    if (player === "X") {
-        player = "O";
-    } else {
-        player = "X";
-    }
-
-}
-
-function box4()
-{
-
-    if (player === "X") {
-        document.getElementById("box4").innerText = "X";
-    } else {
-        document.getElementById("box4").innerText = "O";
+        if (currentPlayer === computer) {
+            setTimeout(computerMove, 500); // Add a small delay for better UX
+        }
     }
 
-    if (player === "X") {
-        document.getElementById("player").innerText = "Player O's just placed";
-    } else {
-        document.getElementById("player").innerText = "Player X's just placed";
+    function computerMove() {
+        let availableCells = [];
+        cells.forEach(cell => {
+            if (cell.textContent === '') {
+                availableCells.push(cell);
+            }
+        });
+
+        const randomCell = availableCells[Math.floor(Math.random() * availableCells.length)];
+        randomCell.textContent = computer;
+        randomCell.classList.add('disabled');
+
+        if (checkWin(computer)) {
+            statusDisplay.textContent = `${computer} wins!`;
+            gameActive = false;
+            return;
+        }
+
+        if (isBoardFull()) {
+            statusDisplay.textContent = 'Draw!';
+            gameActive = false;
+            return;
+        }
+
+        currentPlayer = player;
+        statusDisplay.textContent = `Player ${currentPlayer}'s turn`;
     }
 
-    if (player === "X") {
-        player = "O";
-    } else {
-        player = "X";
+    function checkWin(player) {
+        return winConditions.some(condition => {
+            return condition.every(index => {
+                return cells[index].textContent === player;
+            });
+        });
     }
 
-}
-
-function box5()
-{
-
-    if (player === "X") {
-        document.getElementById("box5").innerText = "X";
-    } else {
-        document.getElementById("box5").innerText = "O";
+    function isBoardFull() {
+        return [...cells].every(cell => cell.textContent !== '');
     }
 
-    if (player === "X")
-    {
-        document.getElementById("player").innerText = "Player O's just placed";
-    } else
-    {
-        document.getElementById("player").innerText = "Player X's just placed";
+    function resetGame() {
+        cells.forEach(cell => {
+            cell.textContent = '';
+            cell.classList.remove('disabled');
+        });
+        currentPlayer = player;
+        gameActive = true;
+        statusDisplay.textContent = `Player ${currentPlayer}'s turn`;
     }
 
-    if (player === "X") {
-        player = "O";
-    } else {
-        player = "X";
-    }
-}
-
-function box6()
-{
-    if (player === "X") {
-        document.getElementById("box6").innerText = "X";
-    } else {
-        document.getElementById("box6").innerText = "O";
-    }
-
-    if (player === "X") {
-        document.getElementById("player").innerText = "Player O's just placed";
-    } else {
-        document.getElementById("player").innerText = "Player X's just placed";
-    }
-
-    if (player === "X") {
-        player = "O";
-    } else {
-        player = "X";
-    }
-}
-
-function box7() {
-    if (player === "X") {
-        document.getElementById("box7").innerText = "X";
-    } else {
-        document.getElementById("box7").innerText = "O";
-    }
-
-    if (player === "X") {
-        document.getElementById("player").innerText = "Player O's just placed";
-    } else {
-        document.getElementById("player").innerText = "Player X's just placed";
-    }
-
-    if (player === "X") {
-        player = "O";
-    } else {
-        player = "X";
-    }
-}
-
-function box8() {
-
-    if (player === "X") {
-        document.getElementById("box8").innerText = "X";
-    } else {
-        document.getElementById("box8").innerText = "O";
-    }
-
-    if (player === "X") {
-        document.getElementById("player").innerText = "Player O's just placed";
-    } else {
-        document.getElementById("player").innerText = "Player X's just placed";
-    }
-
-    if (player === "X") {
-        player = "O";
-    } else {
-        player = "X";
-    }
-}
-
-function box9() {
-
-    if (player === "X") {
-        document.getElementById("box9").innerText = "X";
-    } else {
-        document.getElementById("box9").innerText = "O";
-    }
-
-    if (player === "X") {
-        document.getElementById("player").innerText = "Player O's just placed";
-    } else {
-        document.getElementById("player").innerText = "Player X's just placed";
-    }
-
-    if (player === "X") {
-        player = "O";
-    } else {
-        player = "X";
-    }
-}
+    cells.forEach(cell => cell.addEventListener('click', handleCellClick));
+    resetButton.addEventListener('click', resetGame);
+});

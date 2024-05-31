@@ -6,16 +6,8 @@
 
 #body
 {
-    padding-top: 100px;
     background-color: lightblue;
     text-align: center;
+    color: black;
     font-family: fantasy, sans-serif;
-}
-
-.highlight
-{
-    text-align: left;
-    font-family: fantasy, sans-serif;
-    font-size: 100px;
-    background-color: #FCEEA7;
 }
