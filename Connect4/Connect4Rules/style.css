@@ -3,3 +3,7 @@ body {
     padding-top: 100px;
     color: grey;
 }
+.card {
+    width: 500px;
+    align-content: center;
+}
